@@ -14,11 +14,12 @@
               <b-nav-text class="nav-item pointer">Projects</b-nav-text>
               <b-nav-text class="nav-item pointer">Skills</b-nav-text>
               <b-nav-text class="nav-item pointer">Contact Me</b-nav-text>
-              <b-button variant="primary" class="custom-button pointer">Resume</b-button>
+              <b-button  pill variant="primary" class="custom-button pointer">Resume</b-button>
             </b-nav>
           </b-col>
         </b-row>
       </b-container>
+     
     </div>
   </template>
   
@@ -27,9 +28,12 @@
   </script>
   
   <style scoped>
+ 
   .header {
     /* padding: 20px; */
     padding-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
   }
   
 
@@ -59,11 +63,12 @@
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    margin-left:23%
   }
   
   .nav-item {
-    color: black !important; /* Force black color for all nav items */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Drop shadow */
+    color: rgb(255, 255, 255) !important; /* Force black color for all nav items */
+    text-shadow: 1px 1px 3px rgba(102, 102, 102, 0.3); /* Drop shadow */
     text-decoration: none; /* Remove default underline */
     position: relative; /* For positioning the underline */
     padding: 0 15px; /* Add horizontal padding for spacing */
@@ -71,7 +76,7 @@
   }
   
   .nav-item:hover {
-    color: black !important; /* Ensure text color remains black on hover */
+    color: rgb(255, 255, 255) !important; /* Ensure text color remains black on hover */
   }
   
   .nav-item::after {
@@ -82,7 +87,7 @@
     bottom: 0; /* Position the underline just below the text */
     width: 0;
     height: 2px;
-    background: black; /* Underline color */
+    background: rgb(255, 255, 255); /* Underline color */
     transition: width 0.3s ease; /* Smooth transition */
   }
   
@@ -92,16 +97,16 @@
   
   .custom-button {
     margin-left: 20px;
-  border: 2px solid black !important; /* Black border */
-  color: black !important; /* Black text color */
+  border: 2px solid rgb(255, 255, 255) !important; /* Black border */
+  color: rgb(255, 255, 255) !important; /* Black text color */
   background-color: transparent !important; /* Transparent background */
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 .custom-button:hover {
-  background-color: black !important; /* Black background on hover */
-  color: white !important; /* White text color on hover */
-  border-color: black !important; /* Ensure border color stays black */
+  background-color: rgb(255, 255, 255) !important; /* Black background on hover */
+  color: rgb(0, 0, 0) !important; /* White text color on hover */
+  border-color: rgb(255, 255, 255) !important; /* Ensure border color stays black */
 }
   .pointer{
     cursor: pointer; /* Change cursor to pointer for clickable elements */

@@ -29,8 +29,7 @@ export default {
     /* display: flex; */
     /* flex-direction: row; */
     height: 100vh;
-    margin-left: 20%;
-    margin-right: 20%;
+
 
 }
 </style>
