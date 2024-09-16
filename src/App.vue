@@ -11,9 +11,10 @@
   position: relative;
   height: 100vh;
   margin: 0;
-  background: #d7d7d7; /* Background color for the remaining part */
+  background: radial-gradient(circle, white, #d7d7d7); 
 
   overflow: auto; /* Ensure no overflow issues */
+  overflow-x: hidden;
 }
 
 .content {

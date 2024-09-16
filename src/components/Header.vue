@@ -2,20 +2,18 @@
     <div class="header">
       <b-container class="bv-example-row">
         <b-row class="align-items-center">
-          <!-- First column: Pavani's Portfolio (aligned to the left) -->
           <b-col cols="auto" class="portfolio-col">
             <span class="portfolio-text">Pavani's Portfolio</span>
           </b-col>
   
-          <!-- Remaining columns should be aligned to the right -->
           <b-col class="nav-wrapper">
             <b-nav class="custom-nav">
-              <b-nav-text class="nav-item pointer">About Me</b-nav-text>
-              <b-nav-text class="nav-item pointer">Projects</b-nav-text>
-              <b-nav-text class="nav-item pointer">Skills</b-nav-text>
-              <b-nav-text class="nav-item pointer">Contact Me</b-nav-text>
-              <b-button  pill variant="primary" class="custom-button pointer">Resume</b-button>
-            </b-nav>
+            <b-nav-text class="nav-item pointer" @click="scrollTo('about-me')">About Me</b-nav-text>
+            <b-nav-text class="nav-item pointer" @click="scrollTo('projects')">Projects</b-nav-text>
+            <b-nav-text class="nav-item pointer" @click="scrollTo('skills')">Skills</b-nav-text>
+            <b-nav-text class="nav-item pointer" @click="scrollTo('contact-me')">Contact Me</b-nav-text>
+            <b-button pill variant="primary" class="custom-button pointer">Resume</b-button>
+          </b-nav>
           </b-col>
         </b-row>
       </b-container>
@@ -24,7 +22,13 @@
   </template>
   
   <script>
-  export default {};
+  export default {
+  methods:{
+    scrollTo(sectionId) {
+      this.$emit('scroll-to-section', sectionId);
+    }
+  }
+  };
   </script>
   
   <style scoped>
@@ -45,16 +49,16 @@
   
   .portfolio-text {
     font-style: Montserrat;
-    font-size: 2rem; /* Larger font size for Pavani's Portfolio */
+    font-size: 2rem; 
     color: black;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Drop shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     font-weight: 600;
   }
   
   .nav-wrapper {
     display: flex;
-    justify-content: space-around; /* Align items to the right */
-    flex: 1; /* Take up remaining space */
+    justify-content: space-around; 
+    flex: 1; 
   }
   
   .custom-nav {
@@ -67,49 +71,49 @@
   }
   
   .nav-item {
-    color: rgb(255, 255, 255) !important; /* Force black color for all nav items */
-    text-shadow: 1px 1px 3px rgba(102, 102, 102, 0.3); /* Drop shadow */
-    text-decoration: none; /* Remove default underline */
-    position: relative; /* For positioning the underline */
-    padding: 0 15px; /* Add horizontal padding for spacing */
-    transition: color 0.3s ease; /* Smooth color transition */
+    color: rgb(255, 255, 255) !important;
+    text-shadow: 1px 1px 3px rgba(102, 102, 102, 0.3); 
+    text-decoration: none; 
+    position: relative; 
+    padding: 0 15px; 
+    transition: color 0.3s ease;
   }
   
   .nav-item:hover {
-    color: rgb(255, 255, 255) !important; /* Ensure text color remains black on hover */
+    color: rgb(255, 255, 255) !important; 
   }
   
   .nav-item::after {
-    content: ''; /* Pseudo-element for the underline */
+    content: ''; 
     display: block;
     position: absolute;
     left: 0;
-    bottom: 0; /* Position the underline just below the text */
+    bottom: 0; 
     width: 0;
     height: 2px;
-    background: rgb(255, 255, 255); /* Underline color */
-    transition: width 0.3s ease; /* Smooth transition */
+    background: rgb(255, 255, 255); 
+    transition: width 0.3s ease; 
   }
   
   .nav-item:hover::after {
-    width: 100%; /* Full width underline on hover */
+    width: 100%;
   }
   
   .custom-button {
     margin-left: 20px;
-  border: 2px solid rgb(255, 255, 255) !important; /* Black border */
-  color: rgb(255, 255, 255) !important; /* Black text color */
-  background-color: transparent !important; /* Transparent background */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  border: 2px solid rgb(255, 255, 255) !important; 
+  color: rgb(255, 255, 255) !important; 
+  background-color: transparent !important; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .custom-button:hover {
-  background-color: rgb(255, 255, 255) !important; /* Black background on hover */
-  color: rgb(0, 0, 0) !important; /* White text color on hover */
-  border-color: rgb(255, 255, 255) !important; /* Ensure border color stays black */
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(0, 0, 0) !important; 
+  border-color: rgb(255, 255, 255) !important; 
 }
   .pointer{
-    cursor: pointer; /* Change cursor to pointer for clickable elements */
+    cursor: pointer; 
   }
   </style>
   
