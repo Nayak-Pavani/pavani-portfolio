@@ -32,10 +32,9 @@
               </div>
             </div>
 
-            <!-- Profile Image on the Right -->
-            <!-- <div class="profile-image">
+            <div class="profile-image">
           <img src="../assets/profile.png" alt="Profile" />
-        </div> -->
+        </div> 
           </div>
         </div>
 
@@ -52,7 +51,7 @@
             perspective on technology and team dynamics.
             <div class="readmore-text mt-4">
               <img class="line-svg-left" src="../assets/Line.svg" alt="" />
-              <span class="line-svg-right" 
+              <span class="line-svg-right" @click="scrollToSection('about-me')"
                 >READ MORE</span
               >
               <img class="line-svg-right" src="../assets/Line.svg" alt="" />
@@ -133,8 +132,8 @@
                   <div class="icon-name mt-3">JAVASCRIPT</div>
                 </div>
                 <div class="icon-container icon4">
-                  <img src="../assets/JS.svg" alt="JavaScript" />
-                  <div class="icon-name mt-3">JAVASCRIPT</div>
+                  <img src="../assets/logo.png" alt="logo" />
+                  <div class="icon-name mt-3">VUE.JS</div>
                 </div>
               </div>
               <div
@@ -143,7 +142,7 @@
               >
                 <div class="icon-container icon5">
                   <img src="../assets/bootstrap.svg" alt="HTML" />
-                  <div class="icon-name mt-3">BOOTSRAP</div>
+                  <div class="icon-name mt-3">BOOTSTRAP</div>
                 </div>
                 <div class="icon-container icon6 ">
                   <img src="../assets/figma.svg" alt="CSS3" />
@@ -255,7 +254,7 @@ export default {
   },
   data() {
     return {
-      readMore: false, // Controls whether to show the "ABOUT ME" box and additional content
+      readMore: false, 
       linkedinLink:
         "https://www.linkedin.com/in/pavani-nayak-94b883212?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", // LinkedIn profile link
       gitLink: "https://github.com/Nayak-Pavani/",
@@ -275,7 +274,7 @@ export default {
 
       const element = document.getElementById("main-content");
       if (element) {
-        element.scrollIntoView({ top: 1000, behavior: "smooth" });
+        element.scrollIntoView({  behavior: "smooth" });
       }
     },
     gitRepo() {
@@ -458,13 +457,15 @@ height: 8vh;
 
 /* Profile image section */
 .profile-image img {
-  width: 200px; /* Adjust the width */
-  border-radius: 50%;
+  width: 63vh; /* Adjust the width */
+  position: relative;
+  bottom:133px
+
 }
 
 /* About Me section */
 .about-me {
-  background-color: black;
+  background-color: #292828;
   color: white;
   padding: 20px;
   position: absolute;
@@ -515,7 +516,7 @@ html {
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background: url("../assets/git.svg") no-repeat center center;
+  background: url("../assets/pointing-finger.svg") no-repeat center center;
   background-size: contain;
   animation: bounce 1s infinite;
 }

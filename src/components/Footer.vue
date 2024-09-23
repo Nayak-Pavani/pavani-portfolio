@@ -11,8 +11,15 @@
       <div
         class="social-icons mt-5 d-flex align-items-center justify-content-center"
       >
-        <img class="pointer" src="../assets/Vector (4).svg" alt="linkedin" />
-        <img class="ml-3 pointer" src="../assets/Vector (5).svg" alt="gmail" />
+        <img
+          @click="linkedin()"
+          class="pointer"
+          src="../assets/Vector (4).svg"
+          alt="linkedin"
+        />
+        <a href="mailto:nayakpavani676@gmail.com">
+          <img class="ml-3 pointer" src="../assets/Vector (5).svg" alt="gmail"
+        /></a>
       </div>
       <div class="mt-5">@2024 NAYAK PAVANI</div>
     </div>
@@ -21,14 +28,22 @@
 
 <script>
 export default {
+  data() {
+    return {
+      linkedinLink:
+        "https://www.linkedin.com/in/pavani-nayak-94b883212?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    };
+  },
   methods: {
+    linkedin() {
+      window.open(this.linkedinLink, "_blank"); // Opens the LinkedIn profile in a new tab
+    },
     scrollToTop() {
-   this.$emit('scrollToTop')
-    }
-  }
+      this.$emit("scrollToTop");
+    },
+  },
 };
 </script>
-
 
 <style scoped>
 html {
